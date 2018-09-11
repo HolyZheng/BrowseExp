@@ -1,0 +1,61 @@
+$theme-color: #6476DB;
+$green: #8BC34A;
+$red: #EA7382;
+$exp-one: #EA7382;
+$exp-two: #C4E3A0;
+$exp-three: #A4ACDB;
+$exp-four: #FBDBAB;
+$exp-five: #BBBBBB;
+
+// 将块级元素设置为半径为 radius的圆形
+@mixin circular($radius) {
+  width: $radius*2;
+  height: $radius*2;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// flex布局
+@mixin fja($j: space-between, $a: center) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a
+}
+
+// 旋转元素
+@mixin to-rotate($d) {
+  transform:rotate($d);
+  -ms-transform:rotate($d);
+  -moz-transform:rotate($d);
+  -webkit-transform:rotate($d);
+  -o-transform:rotate($d);
+}
+
+// 绝对定位元素 右下角
+@mixin right-bottom($r: 0, $b: 0) {
+  position: absolute;
+  bottom: $b;
+  right: $r;
+}
+
+@mixin left-top($l: 0, $t: 0) {
+  position: absolute;
+  left: $l;
+  top: $t;
+}
+
+// 处理文字，包括英语，超过长度显示省略号
+@mixin text-deal {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+// 同一标准的阴影
+@mixin shadow {
+  box-shadow: 0 0 0.8rem rgb(196, 194, 194)
+}
+

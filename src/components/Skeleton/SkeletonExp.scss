@@ -1,0 +1,65 @@
+@keyframes placeHolderShimmer{
+  0%{
+      background-position: 50% 0
+  }
+  100%{
+      background-position: -50% 0
+  }
+}
+.skeleton-wrap {
+  box-sizing: border-box;
+  height: 10rem;
+  background-color: #fff;
+  padding: 2rem;
+  .skeleton {
+    height: 6rem;
+    box-sizing: border-box;
+    position: relative;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #eeeeee, #dddddd 10%, #eeeeee 30%);
+    background-size: 400% 400%;
+    .item {
+      position: absolute;
+    }
+    .left-right {
+      height: 6rem;
+      width: 2rem;
+      top: 0;
+      left: 6rem;
+      background-color: #fff;
+    }
+    .line-zero {
+      height: 0.4rem;
+      width: calc(100% - 8rem);
+      background-color: #fff;
+      left: 8rem;
+      top: 0;
+    }
+    .line-one {
+      height: 1rem;
+      width: calc(100% - 8rem);
+      background-color: #fff;
+      left: 8rem;
+      top: 2rem;
+    }
+    .line-two {
+      height: 1rem;
+      width: 6rem;
+      background-color: #fff;
+      top: 3rem;
+      right: 0rem;
+    }
+    .line-three {
+      width: calc(100% - 8rem);
+      height: 2rem;
+      background-color: #fff;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  
+}

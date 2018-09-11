@@ -1,0 +1,41 @@
+@import '../../style/common.scss';
+
+div {
+  font-size: 1.1rem;
+  @include fja(flex-start);
+  border-bottom: 0.1rem solid #F7F2F2;
+  figure {
+    width: 8rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    .portrait {
+      margin-top: 1rem;
+      @include circular(2rem);
+    }
+    p {
+      @include text-deal;
+    }
+  }
+  section {
+    flex-grow: 1;
+    position: relative;
+    h3 + p {
+      color: #797373;
+    }
+    p {
+      @include text-deal;
+    }
+    big {
+      color: #E83232;
+    }
+    .more {
+      @include right-bottom(2rem);
+      .arrow {
+        width: 2rem;
+        height: 3rem;
+        @include to-rotate(-90deg)
+      }
+    }
+  }
+}
