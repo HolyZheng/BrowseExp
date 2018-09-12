@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home/Home.vue';
-import SelectType from './views/SelectType/SelectType.vue';
-import SpExp from './views/SpExp/SpExp.vue';
-import ExpDetail from './views/ExpDetail/ExpDetail.vue';
+
+const Home = () => import('./views/Home/Home.vue');
+const SelectType = () => import('./views/SelectType/SelectType.vue');
+const SpExp = () => import('./views/SpExp/SpExp.vue');
+const ExpDetail = () => import('./views/ExpDetail/ExpDetail.vue');
 
 Vue.use(Router);
 

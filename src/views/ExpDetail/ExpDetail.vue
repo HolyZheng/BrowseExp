@@ -5,38 +5,28 @@
     <p>{{exp.user.name}}</p>
   </header>
   <section>
-    <p>实验类型：<small>{{exp.type}}</small></p>
-    <p>实验时长：<small>{{exp.duration}} min</small></p>
-    <p>薪酬：<small style="color: red">￥{{exp.pay}}</small></p>
-    <p class="segment">
-      实验地点：<br>
+    <p> 实验类型：<small>{{exp.type}}</small></p>
+    <p> 实验时长：<small>{{exp.duration}} min</small></p>
+    <p> 薪酬：<small style="color: red">￥{{exp.pay}}</small></p>
+    <p class="segment">实验地点：<br>
       <small>{{exp.position}}</small>
     </p>
-    <p class="segment">
-      被试要求：<br>
+    <p class="segment">被试要求：<br>
       <small>{{exp.request}}</small>
     </p>
-    <p class="segment">
-      可选时间段：<br>
+    <p class="segment">可选时间段：<br>
       <small>{{exp.period}}</small>
     </p>
-    <p class="segment">
-      实验内容：<br>
+    <p class="segment">实验内容：<br>
       <small>{{exp.content}}</small>
     </p>
-    <p class="segment">
-      其他信息：<br>
+    <p class="segment">其他信息：<br>
       <small>{{exp.others}}</small>
     </p>
-    <p class="segment">
-      报名方式：<br>
+    <p class="segment">报名方式：<br>
       <small>{{exp.application}}</small>
     </p>
   </section>
-  <footer>
-    <button>标记为我已预约</button>
-    <p>先通过提供报名方式预约，成功后再添加至我的预约实验</p>
-  </footer>
 </div>
 </template>
 
@@ -87,16 +77,17 @@ header {
 }
 section {
   box-sizing: border-box;
-  padding: 0 1rem;
+  padding: 1rem 1.6rem;
   p {
     font-size: 1.6rem;
-    margin: 0.6rem 0;
+    margin: 0.4rem 0;
     &.segment {
       padding-bottom: 0.6rem;
       border-bottom: 0.1rem dashed #eeeeee;
     }
     small {
       display: inline-block;
+      line-height: 1.6rem;
       margin: 0.6rem 1rem 0.6rem 1rem;
     }
   }

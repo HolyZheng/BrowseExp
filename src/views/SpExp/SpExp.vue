@@ -4,7 +4,7 @@
     <span>{{type}}</span>
   </header>
   <section>
-    <div v-if="!expArray.length" >
+    <div v-if="!complete" >
       <skeleton-exp />
     </div>
     <div v-for="(exp, index) in expArray" :key="index">
@@ -30,26 +30,33 @@ import { getExperimentsByType, getAllExperiments } from '@/api/data';
 export default class SpExp extends Vue {
   @Prop() private type !: string;
   private expArray!: Exp[];
+  private complete!: boolean;
   private data() {
     return {
       expArray: [],
+      complete: false,
     };
   }
   private created() {
-    if (this.type !== '实验广场') {
-      getExperimentsByType(this.type, 5, 0)
+    const ctx = this;
+    if (ctx.type !== '实验广场') {
+      getExperimentsByType(ctx.type, 5, 0)
         .then((res: any) => {
-          this.expArray = res.data;
+          ctx.expArray = res.data;
+          ctx.complete = true;
         })
         .catch((err: any) => {
+          ctx.complete = true;
           throw new Error(err);
         });
     } else {
       getAllExperiments(5, 0)
         .then((res: any) => {
-          this.expArray = res.data;
+          ctx.expArray = res.data;
+          ctx.complete = true;
         })
         .catch((err: any) => {
+          ctx.complete = true;
           throw new Error(err);
         });
     }

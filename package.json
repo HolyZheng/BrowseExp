@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "fastclick": "^1.0.6",
     "node-sass": "^4.9.3",
+    "normalize.css": "^8.0.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
@@ -21,8 +23,10 @@
     "@vue/cli-plugin-pwa": "^3.0.0",
     "@vue/cli-plugin-typescript": "^3.0.0",
     "@vue/cli-service": "^3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "sass-loader": "^7.1.0",
     "typescript": "^3.0.0",
+    "vue-server-renderer": "^2.5.17",
     "vue-template-compiler": "^2.5.17"
   }
 }
