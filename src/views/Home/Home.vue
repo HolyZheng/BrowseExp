@@ -7,13 +7,13 @@
   <div class="below-header"></div>
   <swiper />
   <nav>
-    <div class="to-type">
+    <div class="to-type" @click="navTo(1)">
       <icon name="#icon-book-2" />
-      <router-link to="/SelectType">实验分类</router-link>
+      <span>实验分类</span>
     </div>
-    <div class="to-exp">
+    <div class="to-exp" @click="navTo(2)">
       <icon name="#icon-crayons-1" />
-      <router-link to="/SpExp/实验广场">实验广场</router-link>
+      <span>实验广场</span>
     </div>
   </nav>
   <section>
@@ -21,7 +21,7 @@
       <strong>实验广场</strong>
       <img src="../../images/down.png" />
     </div>
-    <div v-if="!expArray.length" >
+    <div v-if="!complete" >
       <skeleton-exp />
     </div>
     <div v-else v-for="(exp, index) in expArray" :key="index">
@@ -54,14 +54,25 @@ export default class Index extends Vue {
   private data() {
     return {
       expArray: [],
+      complete: false,
     };
   }
+  private navTo(id: number) {
+    if (id === 1) {
+      this.$router.push('/SelectType');
+    } else if (id === 2) {
+      this.$router.push('/SpExp/实验广场');
+    }
+  }
   private created() {
+    const ctx = this;
     getAllExperiments(5, 0)
       .then((res: any) => {
-        this.expArray = res.data;
+        ctx.expArray = res.data;
+        ctx.complete = true;
       })
       .catch((err: any) => {
+        ctx.complete = false;
         throw new Error(err);
       });
   }
