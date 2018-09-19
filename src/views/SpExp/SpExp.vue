@@ -7,8 +7,11 @@
     <div v-if="!complete" >
       <skeleton-exp />
     </div>
-    <div v-for="(exp, index) in expArray" :key="index">
+    <div v-else-if="expArray.length" v-for="(exp, index) in expArray" :key="index">
       <exp-brief :picture="exp.user.picture" :name="exp.user.name" :title="exp.title" :type="exp.type" :pay="exp.pay" :dutation="exp.duration" :id="exp.experiment_id" />
+    </div>
+    <div class="no-res" v-else>
+      暂时没有相关实验呢，<br /> 稍后再查看吧~
     </div>
   </section>
 </div>
@@ -76,5 +79,12 @@ header {
   span {
     line-height: 4.2rem;
   }
+}
+.no-res {
+  padding-top: 4.6rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: rgb(145, 145, 145);
 }
 </style>

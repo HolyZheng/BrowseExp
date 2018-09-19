@@ -1,8 +1,8 @@
 <template>
 <div>
   <header>
-    <img :src="exp.user.picture" />
-    <p>{{exp.user.name}}</p>
+    <img :src="exp.user && exp.user.picture" />
+    <p>{{exp.user && exp.user.name}}</p>
   </header>
   <section>
     <p> 实验类型：<small>{{exp.type}}</small></p>
