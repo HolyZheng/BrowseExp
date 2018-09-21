@@ -17,7 +17,7 @@
 - 如何部署项目
 
 ## 详细介绍
-详细介绍文章：[]()
+详细介绍文章：[browse-exp开发到部署详细介绍](https://github.com/HolyZheng/BrowseExp/blob/master/document.md)
 
 ## Project setup
 ```
