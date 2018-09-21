@@ -19,6 +19,10 @@
 ## 详细介绍
 详细介绍文章：[browse-exp开发到部署详细介绍](https://github.com/HolyZheng/BrowseExp/blob/master/document.md)
 
+体验app：
+
+![qrcode](https://raw.githubusercontent.com/HolyZheng/holyZheng-blog/master/images/sqcoreForBe.png)
+
 ## Project setup
 ```
 npm install
