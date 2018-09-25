@@ -5,7 +5,7 @@
 
 基于vue，typescript，pwa的一个移动端webapp，取名叫browseExp，主要功能是浏览学校心理学院部分实验信息。（上图是添加到桌面的一级入口）。这个项目已经部署到了服务器上，我们看一下项目最终在客户端运行的样子
 
-![show](https://user-gold-cdn.xitu.io/2018/9/21/165f7ec4f3b79206?w=300&h=519&f=gif&s=1612933)
+![show](https://raw.githubusercontent.com/HolyZheng/holyZheng-blog/master/images/beshow.gif)
 
 可以看到我通过桌面上的一级入口，进入了我们的webapp，并且在断网的条件下进行。这就是pwa的作用，下面开始分享这次的开发到部署的过程。
 ## 为什么要做这个项目呢？
