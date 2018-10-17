@@ -25,7 +25,7 @@
       <skeleton-exp />
     </div>
     <div v-else v-for="(exp, index) in expArray" :key="index">
-      <exp-brief :picture="exp.user.picture" :name="exp.user.name" :title="exp.title" :type="exp.type" :pay="exp.pay" :dutation="exp.duration" :id="exp.experiment_id" />
+      <exp-brief :picture="exp.user.picture" :name="exp.user.name" :title="exp.title" :type="exp.type" :pay="exp.pay" :duration="exp.duration" :id="exp.experiment_id" />
     </div>
   </section>
 </div>
